@@ -23,11 +23,11 @@ export function Countries() {
     <div className='listOfCountr'>
           <select name="" id="firstSelect"onChange={(e)=> setSelectedCountries(e.target.value)} >
           <option value="">select countries</option> 
-          {Countries && Countries.map((item,i)=>(<option value={item} key={i}>{item}</option>  ))}
+          {Countries ? Countries.map((item,i)=>(<option value={item} key={i}>{item}</option>)):null}
           </select>
            <select name="" id="secondSelect">
            <option >select state</option> 
-             {State && State.map((item,i)=>(<option value={item} key={i}>{item}</option>))}
+             {State ? State.map((item,i)=>(<option value={item} key={i}>{item}</option>)) : null}
          
          </select>
        </div>
